@@ -43,6 +43,10 @@ abstract class WebDriverContainer extends WebDriverBase {
         'value' => $value
       ));
 
+    if(!is_array($results['value'])) {
+        return null;
+    }
+    
     return array_filter(array_map(
       array($this, 'webDriverElement'), $results['value']));
   }
