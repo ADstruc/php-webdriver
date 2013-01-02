@@ -83,7 +83,12 @@ final class WebDriverSession extends WebDriverContainer {
     return $this;
   }
 
-  public function timeouts() {
+  public function timeouts($type = null, $ms = null) {
+    if(!is_null($type) && !is_null($ms)) {
+      $this->curl('POST', '/timeouts', array('type' => $type, 'ms' => $ms));
+      return $this;
+    }
+
     $item = new WebDriverSimpleItem($this->url . '/timeouts');
     return $item->setMethods(array(
       'async_script' => 'POST',
