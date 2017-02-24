@@ -25,11 +25,11 @@ The function's return value is exactly what is returned from the server as part 
         $wd_host = 'http://localhost:4444/wd/hub'; // this is the default
         $web_driver = new WebDriver($wd_host);
 
-        // First param to session() is the 'browserName' (default = 'firefox')
+        // First param to session() is the 'browserName' (default = 'chrome')
         // Second param is a JSON object of additional 'desiredCapabilities'
 
         // POST /session
-        $session = $web_driver->session('firefox');
+        $session = $web_driver->session('chrome');
 
 * See also [wiki page for launching different browsers](https://github.com/facebook/php-webdriver/wiki/Launching-Browsers).
 
