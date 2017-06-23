@@ -1,0 +1,8 @@
+{
+  "name": "adstruc/webdriver",
+  "description": "A PHP client for Selenium WebDriver",
+  "keywords": ["webdriver", "selenium", "php", "facebook"],
+  "homepage": "https://github.com/adstruc/php-webdriver",
+  "type": "library",
+  "license": "Apache-2.0"
+}
